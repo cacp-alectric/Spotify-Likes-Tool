@@ -1,5 +1,7 @@
 import os
 import dotenv
+import mutagen.mp3
+import mutagen.flac
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 
@@ -17,3 +19,4 @@ results = sp.current_user_saved_tracks(limit=20, offset=0)
 for item in results['items']:
     track = item['track']
     print(track['artists'][0]['name'], "-", track['name'])
+
