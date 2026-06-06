@@ -105,4 +105,3 @@ for artist, title in missing:
     print(f"{artist} - {title}")
 
 conn.close()
-
