@@ -59,11 +59,6 @@ c.executemany("INSERT INTO tracks (title, artist) VALUES (?, ?)",
 
 conn.commit()
 
-c.execute("SELECT title, artist FROM tracks")
-rows = c.fetchall()
-for row in rows:
-    print(row)
-
 c.execute("""
     CREATE TABLE IF NOT EXISTS liked_tracks (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
